@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace OMADA_NET_AUTOMATED.Pages
 {
@@ -34,7 +30,8 @@ namespace OMADA_NET_AUTOMATED.Pages
 
         public static string submitButton = $"//p[@class='submit']";
         public static string errorElement = $"//p[@class='error no-label']";
-
-
+        public static string textXPath = $"//*[@class='text']";
+        public static string selecyXPath = $"//Select";
+        public static string yesXPath = $"//*[text()='Yes']";
     }
 }

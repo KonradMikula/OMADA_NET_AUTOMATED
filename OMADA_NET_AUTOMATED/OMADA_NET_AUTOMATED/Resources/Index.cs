@@ -12,6 +12,7 @@ namespace OMADA_NET_AUTOMATED.Pages
 
         //CookieBar
         public static string closeButton = $"//span[@class='cookiebar__button button--variant1']";
-
+        public static string linkTagName = "a";
+        public static string closeXPath = $"//*[text()='Close ']";
     }
 }

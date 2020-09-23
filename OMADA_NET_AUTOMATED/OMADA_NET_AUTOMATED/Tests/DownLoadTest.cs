@@ -2,15 +2,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OMADA_NET_AUTOMATED.Tests;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 using OMADA_NET_AUTOMATED.Pages;
-using System.Collections;
-using OpenQA.Selenium.Support.UI;
-using System.Net.Cache;
 using System.Threading;
 using System.IO;
 using System.Security.Cryptography;
-using System.ComponentModel;
 
 namespace OMADA_NET_AUTOMATED
 {
@@ -29,13 +24,12 @@ namespace OMADA_NET_AUTOMATED
         {
 
             Setup(browser);
-            driver.Url = "https://www.omada.net/en-us/more/resources/omada-identity-suite-solution-overview";
 
-            string DownloadFilePath = "";
+           driver.Url = "https://www.omada.net/en-us/more/resources/omada-identity-suite-solution-overview";
+           string DownloadFilePath = "";
 
 
-            //Omada_Identity_Cloud_Guide_2020
-            driver.FindElement(By.XPath($"//*[text()='Download Guide']")).Click();
+            driver.FindElement(By.XPath(Download.DownLoadGuide)).Click();
             DownloadFilePath = WaitForDownloadFile(Download.OIGC2020Name);
 
             if (!CalculateMD5(DownloadFilePath).Equals(Download.OIGC2020MD5))
@@ -43,11 +37,39 @@ namespace OMADA_NET_AUTOMATED
                 Assert.Fail("File error" + DownloadFilePath);
             }
 
+            checkFile(Download.Case1Name, Download.Case1Link, Download.Case1MD);
+            checkFile(Download.Case2Name, Download.Case2Link, Download.Case2MD);
+            checkFile(Download.Case3Name, Download.Case3Link, Download.Case3MD);
+            checkFile(Download.Case4Name, Download.Case4Link, Download.Case4MD);
+            checkFile(Download.Case5Name, Download.Case5Link, Download.Case5MD);
+            checkFile(Download.Case6Name, Download.Case6Link, Download.Case6MD);
+            checkFile(Download.Case7Name, Download.Case7Link, Download.Case7MD);
+            checkFile(Download.Case8Name, Download.Case8Link, Download.Case8MD);
+            checkFile(Download.Case9Name, Download.Case9Link, Download.Case9MD);
 
 
 
-            
+
             TearDown();
+
+        }
+
+        private void checkFile(string name, string link, string md5)
+        {
+            string DownloadFilePath = "";
+            driver.Url = link;
+            try
+            {
+                driver.FindElement(By.XPath(Download.Close)).Click();
+            }
+            catch { }
+            driver.FindElement(By.XPath(Download.DownloadCustomerCase)).Click();
+            DownloadFilePath = WaitForDownloadFile(name);
+
+            if (!CalculateMD5(DownloadFilePath).Equals(md5))
+            {
+                Assert.Fail("File error" + DownloadFilePath);
+            }
 
         }
 

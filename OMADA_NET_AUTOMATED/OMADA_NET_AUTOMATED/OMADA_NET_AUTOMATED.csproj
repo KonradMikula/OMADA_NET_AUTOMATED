@@ -56,18 +56,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\Download.cs" />
-    <Compile Include="Pages\Form.cs" />
-    <Compile Include="Pages\Index.cs" />
+    <Compile Include="Resources\Download.cs" />
+    <Compile Include="Resources\Form.cs" />
+    <Compile Include="Resources\Index.cs" />
     <Compile Include="Tests\DownLoadTest.cs" />
     <Compile Include="Tests\FormTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\TestBase.cs" />
+    <Compile Include="Tests\LinksTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ReadMe.txt" />
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
