@@ -1,5 +1,5 @@
 ﻿
-namespace OMADA_NET_AUTOMATED.Pages
+namespace OMADA_NET_AUTOMATED.Resources
 {
     public static class Download
     {

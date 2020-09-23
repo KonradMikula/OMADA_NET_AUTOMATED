@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OMADA_NET_AUTOMATED.Tests;
 using OpenQA.Selenium;
-using OMADA_NET_AUTOMATED.Pages;
+using OMADA_NET_AUTOMATED.Resources;
 using OpenQA.Selenium.Support.UI;
 
 namespace OMADA_NET_AUTOMATED
@@ -69,12 +69,12 @@ namespace OMADA_NET_AUTOMATED
                 }
                 else if (i == 5)
                 {
-                    var select = new SelectElement(driver.FindElement(By.XPath(Form.textXPath)));
+                    var select = new SelectElement(driver.FindElement(By.XPath(Form.selecyXPath)));
                     select.SelectByText("Togo");
                 }
                 else if (i == 6)
                 {
-                    var select = new SelectElement(driver.FindElements(By.XPath(Form.textXPath))[1]);
+                    var select = new SelectElement(driver.FindElements(By.XPath(Form.selecyXPath))[1]);
                     select.SelectByText("0-500");
                 }
                 else if (i == 7)
@@ -120,12 +120,12 @@ namespace OMADA_NET_AUTOMATED
                 }
                 else if (i == 6)
                 {
-                    var select = new SelectElement(driver.FindElement(By.XPath(Form.textXPath)));
+                    var select = new SelectElement(driver.FindElement(By.XPath(Form.selecyXPath)));
                     select.SelectByText("Togo");
                 }
                 else if (i == 7)
                 {
-                    var select = new SelectElement(driver.FindElements(By.XPath(Form.textXPath))[1]);
+                    var select = new SelectElement(driver.FindElements(By.XPath(Form.selecyXPath))[1]);
                     select.SelectByText("0-500");
                 }
                 else if (i == 8)
@@ -147,7 +147,7 @@ namespace OMADA_NET_AUTOMATED
 
                 if (i==0)
                 {
-                    var select = new SelectElement(driver.FindElement(By.XPath(Form.textXPath)));
+                    var select = new SelectElement(driver.FindElement(By.XPath(Form.selecyXPath)));
                     select.SelectByText("HR");
                 }
                 else if (i == 1)
@@ -168,7 +168,7 @@ namespace OMADA_NET_AUTOMATED
                 }
                 else if (i==5)
                 {
-                    var select = new SelectElement(driver.FindElements(By.XPath(Form.textXPath))[1]);
+                    var select = new SelectElement(driver.FindElements(By.XPath(Form.selecyXPath))[1]);
                     select.SelectByText("VP");
                 }
                 else if (i == 6)
@@ -181,7 +181,7 @@ namespace OMADA_NET_AUTOMATED
                 }
                 else if (i == 8)
                 {
-                    var select = new SelectElement(driver.FindElements(By.XPath(Form.textXPath))[2]);
+                    var select = new SelectElement(driver.FindElements(By.XPath(Form.selecyXPath))[2]);
                     select.SelectByText("Togo");
                 }
                 else if (i == 9)

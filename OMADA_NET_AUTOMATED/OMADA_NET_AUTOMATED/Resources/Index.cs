@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OMADA_NET_AUTOMATED.Pages
+namespace OMADA_NET_AUTOMATED.Resources
 {
     public static class Index
     {

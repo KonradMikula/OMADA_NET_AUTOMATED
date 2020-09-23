@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OMADA_NET_AUTOMATED.Tests;
 using OpenQA.Selenium;
-using OMADA_NET_AUTOMATED.Pages;
+using OMADA_NET_AUTOMATED.Resources;
 using System.Threading;
 using System.IO;
 using System.Security.Cryptography;

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OMADA_NET_AUTOMATED.Pages;
+using OMADA_NET_AUTOMATED.Resources;
 using OpenQA.Selenium;
 
 namespace OMADA_NET_AUTOMATED.Tests
